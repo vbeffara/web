@@ -1,0 +1,92 @@
+- file: DLA.1000
+  desc: A DLA cluster of size 2000
+
+- file: DLA.2000
+  desc: A DLA cluster of size 4096
+
+- file: DLA.4000
+  desc: A DLA cluster of size 8192
+
+- file: Ising-0.881-1000
+  desc: An Ising configuration (beta=0.881374)
+
+- file: Ising-0.900-1000
+  desc: An Ising configuration (beta=0.900000)
+
+- file: LERW
+  desc: A loop-erased walk of size 2000
+
+- file: Lines
+  desc: Broken line process
+
+- file: Perco-bond
+  desc: Bond-percolation cluster (p=0.500000)
+
+- file: Perco-site
+  desc: Site-percolation cluster (p=0.580000)
+
+- file: Perco.grad
+  desc: Gradient percolation cluster
+
+- file: Piv
+  desc: A pivoting point of angle pi/2
+
+- file: SAW
+  desc: A self-avoiding walk of length 10000
+
+- file: SLE-1-1000-2085690
+  desc: Schramm’s SLE Process (kappa=1.000000)
+
+- file: SLE-1-500-20856904
+  desc: Schramm’s SLE Process (kappa=1.000000)
+
+- file: SLE-2-1000-2085690
+  desc: Schramm’s SLE Process (kappa=2.000000)
+
+- file: SLE-2-500-20856904
+  desc: Schramm’s SLE Process (kappa=2.000000)
+
+- file: SLE-3-1000-2085690
+  desc: Schramm’s SLE Process (kappa=3.000000)
+
+- file: SLE-3-500-20856904
+  desc: Schramm’s SLE Process (kappa=3.000000)
+
+- file: SLE-3.5-1000-2085690
+  desc: Schramm’s SLE Process (kappa=3.500000)
+
+- file: SLE-4-1000-2085690
+  desc: Schramm’s SLE Process (kappa=4.000000)
+
+- file: SLE-4-500-20856904
+  desc: Schramm’s SLE Process (kappa=4.000000)
+
+- file: SLE-4.5-1000-2085690
+  desc: Schramm’s SLE Process (kappa=4.500000)
+
+- file: SLE-5-1000-2085690
+  desc: Schramm’s SLE Process (kappa=5.000000)
+
+- file: SLE-5-500-20856904
+  desc: Schramm’s SLE Process (kappa=5.000000)
+
+- file: SLE-6-1000-2085690
+  desc: Schramm’s SLE Process (kappa=6.000000)
+
+- file: SLE-6-2000
+  desc: Schramm’s SLE Process (kappa=6.000000)
+
+- file: SLE-6-500-20856904
+  desc: Schramm’s SLE Process (kappa=6.000000)
+
+- file: SLE-7-1000-2085690
+  desc: Schramm’s SLE Process (kappa=7.000000)
+
+- file: SLE-7-500-20856904
+  desc: Schramm’s SLE Process (kappa=7.000000)
+
+- file: SLE-8-1000-2085690
+  desc: Schramm’s SLE Process (kappa=8.000000)
+
+- file: SLE-8-500-20856904
+  desc: Schramm’s SLE Process (kappa=8.000000)
