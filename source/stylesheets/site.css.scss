@@ -29,7 +29,7 @@ article {
   time { color: $blue; display: block; text-align: center; margin: -3ex 0 3ex; }
   p { margin: 1ex 0; line-height: 130%; }
   div.post-content > p:first-child:first-letter { font-size: 320%; color: $blue; float: left; margin: .6ex .1em 0 0; }
-  pre { margin: 3ex 0em; padding: 1ex 1em; background: rgba(0, 0, 0, 0.15); border: solid $blue; border-width: 0 2px; }
+  pre { margin: 3ex 0em; padding: 1ex 1em; background: rgba(0, 0, 0, 0.05); border: solid $blue; border-width: 0 2px; }
 }
 
 a { text-decoration: none; color: $blue; &:visited, &:active { color: $blue; } &:hover { text-decoration: underline; } }
@@ -40,7 +40,7 @@ img.logotop { float: right; border-left : 1.5em solid white; margin: .5ex -1.5em
 
 hr { border: 0px; color: $blue; background-color: $blue; height: 1px; margin: 2ex -1em; }
 
-ol.bibliography { list-style-type: none; padding: 0 0 0 3em; text-indent: -3em; li { margin: 1ex 0; } }
+ol.bibliography { list-style-type: none; li { margin: 1ex 0; } }
 
 table { margin: 2ex auto 1ex; border-collapse: collapse; font-size: 90%;
     td { padding: .5ex .5em; border: 1px solid $blue; } }

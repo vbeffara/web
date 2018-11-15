@@ -19,13 +19,11 @@ dimensional objects, especially of SLE processes. Some of them can be found
 them are gathered [here](simulations.html) (I am planning to set up separate
 pages for a few of the programs, which will be linked from there as well).
 
+<% list = citations_search(nil).map{|k| citation_entry(k)}.select{|e| e["mendeley-tags"]} %>
 <% [["vb_pub", "Publications"], ["vb_pre", "Preprints"], ["vb_misc", "Other documents"]].each do |tag,name| %>
 ## <%=name%>
-
 <ol class="bibliography">
-    <% citations_search(nil)
-        .map{|k| citation_entry(k)}
-        .select{|e| e["mendeley-tags"] && e["mendeley-tags"].include?(tag)}
+    <% list .select{|e| e["mendeley-tags"].include?(tag)}
         .sort_by{|e| e["issued"]["date-parts"][0]}.reverse
         .each do |e| %>
     <li>
