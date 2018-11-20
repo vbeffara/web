@@ -32,6 +32,8 @@ Alexander Glazman, Ioan Manolescu,
 *Exponential decay in the loop $O(n)$ model: $n>1$, $x<1/\sqrt{3}+\varepsilon(n)$*,
 <https://arxiv.org/pdf/1810.11302>
 
+### 2018/11/20 : Nicolas FRILET
+
 ## Archives — 2017–2018
 
 ### 2017/09/25 : Nicolas FRILET

@@ -27,7 +27,7 @@ pages for a few of the programs, which will be linked from there as well).
         .sort_by{|e| e["issued"]["date-parts"][0]}.reverse
         .each do |e| %>
     <li>
-        <%= citation_formatted(e) %>
+        <%= citation_formatted(e).gsub(/(.*)“(.*)”(.*)/, "<b>\\1</b>“\\2”\\3") %>
         <%= link_to "[PDF]", "pdfs/bib/" + e["id"] + ".pdf" %>
         <% if e["URL"] %><%= link_to "[link]", e["URL"] %><% end %>
         <% if File.exists?("source/pdfs/slides/" + e["id"] + ".pdf") %>
