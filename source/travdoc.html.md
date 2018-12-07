@@ -18,7 +18,15 @@ Ahad N. Zehmakan,
 
 ### 2018/10/16 : Cong Bang HUYNH
 
+Andrea Collevecchio, Cong Bang Huynh, Daniel Kious,
+*The branching-ruin number as critical parameter of random processes on trees*,
+<https://arxiv.org/pdf/1811.08058>
+
 ### 2018/10/23 : Nicolas FRILET
+
+Ahmed Sid-Ali, Khader Khadraoui,
+*Asymptotic adaptive threshold for connectivity in a random geometric social network*,
+<https://arxiv.org/pdf/1810.06479>
 
 ### 2018/11/06 : Alejandro RIVERA
 
@@ -33,6 +41,18 @@ Alexander Glazman, Ioan Manolescu,
 <https://arxiv.org/pdf/1810.11302>
 
 ### 2018/11/20 : Nicolas FRILET
+
+Ludovic Stephan, Laurent Massoulié,
+*Robustness of spectral methods for community detection*,
+<https://arxiv.org/pdf/1811.05808>
+
+### 2018/11/27 : Cong Bang HUYNH
+
+Julien Brémont,
+*Random walk in a stratified independent random environment*,
+<https://arxiv.org/pdf/1811.07562>
+
+### 2018/12/04 : Guest star, Hervé PAJOT
 
 ## Archives — 2017–2018
 

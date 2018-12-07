@@ -1,0 +1,11 @@
+AddCharset UTF-8 .html
+
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/html
+
+ExpiresActive On
+ExpiresDefault "access plus 1 month"
+
+Redirect 301 /vincent.beffara/ http://vbeffara.perso.math.cnrs.fr/

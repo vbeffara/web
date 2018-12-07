@@ -1,0 +1,70 @@
+==================================================================
+https://keybase.io/vbeffara
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://vbeffara.perso.math.cnrs.fr
+  * I am vbeffara (https://keybase.io/vbeffara) on keybase.
+  * I have a public key with fingerprint 2E9C F085 1C27 4D8D C9D3  5DF6 12D4 D07D 29C0 9D06
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.7"
+        },
+        "key": {
+            "fingerprint": "2e9cf0851c274d8dc9d35df612d4d07d29c09d06",
+            "host": "keybase.io",
+            "key_id": "12D4D07D29C09D06",
+            "uid": "f17ea4fb7403189037635c9fcd3fe419",
+            "username": "vbeffara"
+        },
+        "merkle_root": {
+            "ctime": 1424911764,
+            "hash": "4ca0ae2cbdf3f4df84bbc88e29925fb4ec808322a6d090a2a831aafcf132555954bc01c529953a49457cf81b6b33de743ab7cb8ac74d22c1f34893da66263f05",
+            "seqno": 163660
+        },
+        "service": {
+            "hostname": "vbeffara.perso.math.cnrs.fr",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1424911858,
+    "expire_in": 157680000,
+    "prev": "741a478e5e88cf1fb8712a195eaf8c9c7ee65b7a077a783e974acb17d28b431d",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFdkj1rFFEUhseYLCgKxsI6jFgoy+R+f6R10c5CLMRmuR/nZsdkZ9Y7kzUhrFim
+TGUXsBH8BXaCvY2FfyJNChuxEL13CZI41cyd57z3vO85xzevFivrt79/W9z/cjK4
+8vXUFs/Opj8OS9v6g3LrsHS7NTR9fmvMFMqtcgcOrOmgqtuNpvVQvew2zplhOYfY
+1W2TKFTJSpaLYcZzcaibbYizWGetkoB2ASmOHZHMK++0p9wHgYlnHklPtEPaI5Ek
+J23XX7q1XGqOa59OMRmxEZIjoh8iPVrye8sfAUswLFjJEMVKIyoF5U4H52kAhnUG
+O4jnluYWQjDR5H6nEHd2YRzbdmna9XVGMCNMYywFSx2ZbpKKmDPIAHHWBxqYD4pZ
+65QCojXhwTJwCilKiBEeaWSIURQbE1zAlHDONWfWIex44jk1TDMuXVDYCkupB8mo
+sdJZZVxKiBCHA2VKU2+EIIIGxJOFDl41bWpOUCHQIn/Hee0g951j+89dNUvTaaup
+6SeVa2JXhZg0ZrHtW9fuJnDS97OtzzmE/mCWK1+DHZ9rjm3d+DTDi0PGibycj+Jq
+WML+rI4wrjPBpVAoPfkemCdJybBhUgEHpVIUwSqJicGagwnKaScBBLfSICmNVBS0
+ZMZZnFZCWUaxv+A6ifZmO2l29XZj+r0I5eLo0WqxvlIM1lbyFhfXr936t9pvipM7
+P9+ONm+IT/t3j1+823w++MhWR8X7o3tnT9aKkvw+HXzQw6fo1+MHf/4C
+=UkgH
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/vbeffara
+
+==================================================================
