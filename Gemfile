@@ -5,3 +5,4 @@ gem 'middleman-bibtex'
 gem "middleman-syntax"
 gem "redcarpet"
 gem "builder"
+gem "arxiv"

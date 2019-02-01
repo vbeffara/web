@@ -1,0 +1,59 @@
+---
+title: Groupe de travail
+---
+
+<%
+    talks = [
+        ["2019/01/30", "Alejandro RIVERA", "exposé inaugural 2019"],
+        ["2018/11/27", "Cong Bang HUYNH", "1811.07562"],
+        ["2018/11/20", "Nicolas FRILET", "1811.05808"],
+        ["2018/11/13", "Romain DURAND", "1810.11302"],
+        ["2018/11/06", "Alejandro RIVERA", "1810.09861"],
+        ["2018/10/23", "Nicolas FRILET", "1810.06479"],
+        ["2018/10/16", "Cong Bang HUYNH", "1811.08058"],
+        ["2018/10/09", "Romain DURAND", "1809.10764"],
+        ["2018/10/02", "Alejandro RIVERA", "1807.00422"],
+        ["2018/06/12", "Nicolas FRILET", "1806.03134"],
+        ["2018/06/05", "Cong Bang HUYNH", "1805.10969"],
+        ["2018/05/29", "Romain DURAND", "1805.05700"],
+        ["2018/05/22", "Nicolas FRILET", "1805.01688"],
+        ["2018/05/15", "Alejandro RIVERA", "1805.01615"],
+        ["2018/04/24", "Renaud RAQUEPAS", "1804.04699"],
+        ["2018/04/10", "Cong Bang HUYNH", "1804.00205"],
+        ["2018/04/03", "Romain DURAND", "1803.09686"],
+        ["2018/03/27", "Nicolas FRILET", "1803.05907"],
+        ["2018/03/20", "Renaud RAQUEPAS", "1803.01893"],
+        ["2018/03/13", "Cong Bang HUYNH", "1803.00793"],
+        ["2018/02/27", "Romain DURAND", "1802.05493"],
+        ["2018/02/13", "Nicolas FRILET", "1802.00862"],
+        ["2018/02/06", "Renaud RAQUEPAS", "1801.09440"],
+        ["2018/01/30", "Romain DURAND", "1801.01934"],
+        ["2018/01/23", "Nicolas FRILET", "1801.01816"],
+        ["2017/12/08", "Renaud RAQUEPAS", "1711.04700"],
+        ["2017/12/01", "Alejandro RIVERA", "1711.08815"],
+        ["2017/11/24", "Cong Bang HUYNH", "1711.04872"],
+        ["2017/11/17", "Romain DURAND", "1602.05598"],
+        ["2017/11/10", "Nicolas FRILET", "1711.00723"],
+        ["2017/10/27", "Renaud RAQUEPAS", "1710.04013"],
+        ["2017/10/20", "Alejandro RIVERA", "1710.04261"],
+        ["2017/10/13", "Romain DURAND", "1709.09757"],
+        ["2017/10/06", "Cong Bang HUYNH", "1709.07849"],
+        ["2017/09/25", "Nicolas FRILET", "1708.09460"],
+    ]
+
+    def talk (date, speaker, id)
+        manuscript = Arxiv.get(id)
+        "\n### " + date + " : " + speaker + "\n" +
+        manuscript.authors.map(&:name).join(", ") + ",\n" +
+        "*" + manuscript.title + "*,\n" +
+        "(" + id + ",\n" +
+        "[abstract](" + manuscript.arxiv_url + "),\n" +
+        "[pdf](" + manuscript.pdf_url + "))\n"
+    rescue
+        "\n### " + date + " : " + speaker + ", " + id + "\n"
+    end
+
+    talks.each do |d,s,i|
+        %> <%= talk(d,s,i) %> <%
+    end
+%>
