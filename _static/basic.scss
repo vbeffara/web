@@ -16,7 +16,7 @@ h3 { font-size: 125%; margin: 2.5ex -1em 1ex -1em; }
     img { display: block; border: none; max-width: 100%; margin: 2ex auto; }
     h2 { margin: .5ex -.3em .2ex; font-size: small; font-weight: normal; text-transform: lowercase; border-bottom: 1px solid $green;
         text-align: right; color: $green; }
-    ul { margin: 0; padding: .2em; list-style-image: url("/images/bullet.png"); font-size: 75%;
+    ul { margin: 0; padding: .2em; list-style-image: url("/_static/images/bullet.png"); font-size: 75%;
         li { margin: .2ex 0 .2ex 1em; }
         a { color: $green; }
         li.current { margin-right: -.87em; background: rgba($green,1); a { padding: 0 .2em; color: $blue; } }
@@ -28,7 +28,7 @@ h3 { font-size: 125%; margin: 2.5ex -1em 1ex -1em; }
 article {
   time { color: $blue; display: block; text-align: center; margin: -3ex 0 3ex; }
   p { margin: 1ex 0; line-height: 130%; }
-  div.post-content > p:first-child:first-letter { font-size: 320%; color: $blue; float: left; margin: .6ex .1em 0 0; }
+  div.post-content > div.section > p:first-child:first-letter { font-size: 320%; color: $blue; float: left; margin: .6ex .1em 0 0; }
   pre { margin: 3ex 0em; padding: 1ex 1em; background: rgba(0, 0, 0, 0.05); border: solid $blue; border-width: 0 2px; }
 }
 
@@ -132,3 +132,6 @@ table { margin: 2ex auto 1ex; border-collapse: collapse; font-size: 90%;
     .vi    { color: #008080 } // Name.Variable.Instance
     .il    { color: #099 } // Literal.Number.Integer.Long
 }
+
+.headerlink { display: none; }
+.katex { font-size: 100% !important; }

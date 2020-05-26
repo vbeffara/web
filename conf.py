@@ -16,7 +16,7 @@ author = 'Vincent Beffara'
 
 extensions = ['sphinx_rtd_theme',
               'sphinxcontrib.bibtex',
-              #   'sphinxcontrib.katex',
+              'sphinxcontrib.katex',
               'theme']
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -26,8 +26,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_show_sourcelink = False
 html_static_path = ['_static']
-html_theme = 'vb'
-html_theme_options = {'prev_next_buttons_location': None}
+html_theme = 'basic'
 
 katex_options = r'''{
     delimiters: [
@@ -36,3 +35,11 @@ katex_options = r'''{
         { left: "$$", right: "$$", display: true },
         { left: "$", right: "$", display: false }
     ] }'''
+
+
+def sass(x, y, z):
+    os.system("sass --sourcemap=none _static/basic.scss _static/basic.css")
+
+
+def setup(app):
+    app.connect('source-read', sass)

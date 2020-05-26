@@ -21,11 +21,11 @@
   <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
   {%- endfor %}
 
-  {%- block scripts %}
+  {% block scripts %}
   {%- for scriptfile in script_files %}
   {{ js_tag(scriptfile) }}
   {%- endfor %}
-  {%- endblock %}
+  {% endblock %}
 
   {# favicon #}
   {# canonical link #}
@@ -43,7 +43,7 @@
   </div>
 
   <div id="preamble">
-    {#<% link_to "http://www-fourier.ujf-grenoble.fr" do %> <%= image_tag "IF.png" %> <% end %>#}
+    <a href="http://www-fourier.ujf-grenoble.fr"> <img src="/_static/images/IF.png" alt="If"> </a>
 
     <h2>Contact</h2>
     <ul>
@@ -60,7 +60,8 @@
     </ul>
 
     <h2>Navigation</h2>
-    {# site map #}
+
+    {{ toctree(maxdepth=1, collapse=False, includehidden=true) }}
 
     <h2>Links</h2>
     <ul>

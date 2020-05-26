@@ -1,3 +1,5 @@
+.. title:: Home
+
 Vincent Beffara
 ===============
 
@@ -18,15 +20,15 @@ was previously at the École Normale Supérieure in Lyon.
 Images and simulations
 ----------------------
 
-During my PhD and since then, I produced quite a few pictures of various
-two- dimensional objects, especially of SLE processes. Some of them can
-be found `here <pictures.html>`__, and a few comments about the programs
-used to generate them are gathered `here <simulations.html>`__ (I am
-planning to set up separate pages for a few of the programs, which will
-be linked from there as well).
+During my PhD and since then, I produced quite a few pictures of various two-
+dimensional objects, especially of SLE processes. Some of them can be found
+`here <pictures.html>`__, and a few comments about the programs used to generate
+them are gathered `here <simulations.html>`__ (I am planning to set up separate
+pages for a few of the programs, which will be linked from there too).
 
 .. toctree::
    :maxdepth: 1
    :hidden:
 
+   self
    simulations
