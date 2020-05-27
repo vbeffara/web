@@ -42,6 +42,8 @@ hr { border: 0px; color: $blue; background-color: $blue; height: 1px; margin: 2e
 
 ol.bibliography { list-style-type: none; padding: 0 0 0 3em; text-indent: -3em; li { margin: 1ex 0; } }
 
+dl.citation { dt { float: left; } span.brackets::before { content: "["; } span.brackets::after { content: "]"; } }
+
 table { margin: 2ex auto 1ex; border-collapse: collapse; font-size: 90%;
     td { padding: .5ex .5em; border: 1px solid $blue; } }
 

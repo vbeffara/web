@@ -2,6 +2,10 @@
 
 import os
 import sys
+from pybtex.style.formatting.plain import Style as UpStyle
+from pybtex.style.template import sentence, tag, names
+from pybtex.plugin import register_plugin
+
 sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -14,10 +18,7 @@ author = 'Vincent Beffara'
 
 # -- General configuration ---------------------------------------------------
 
-extensions = ['sphinx_rtd_theme',
-              'sphinxcontrib.bibtex',
-              'sphinxcontrib.katex',
-              'theme']
+extensions = ['sphinxcontrib.bibtex', 'sphinxcontrib.katex']
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
@@ -38,7 +39,22 @@ katex_options = r'''{
 
 
 def sass(x, y, z):
-    os.system("sass --sourcemap=none _static/basic.scss _static/basic.css")
+    os.system("sass --no-source-map _static/basic.scss _static/basic.css")
+
+
+class MyStyle(UpStyle):
+    def __init__(self):
+        super().__init__(abbreviate_names=True)
+
+    def format_names(self, role, as_sentence=True):
+        formatted_names = names(role, sep=', ', sep2=' and ', last_sep=' and ')
+        if as_sentence:
+            return tag('b')[sentence[formatted_names]]
+        else:
+            return formatted_names
+
+
+register_plugin('pybtex.style.formatting', 'mystyle', MyStyle)
 
 
 def setup(app):

@@ -29,6 +29,29 @@ dimensional objects, especially of SLE processes. Some of them can be found
 them are gathered `here <simulations.html>`__ (I am planning to set up separate
 pages for a few of the programs, which will be linked from there too).
 
+Publications
+------------
+
+.. bibliography:: ../zotero.bib
+   :style: mystyle
+   :filter: keywords % "vb_pub"
+
+Preprints
+---------
+
+.. bibliography:: ../zotero.bib
+   :style: mystyle
+   :filter: keywords % "vb_pre"
+   :labelprefix: P
+
+Other documents
+---------------
+
+.. bibliography:: ../zotero.bib
+   :style: mystyle
+   :filter: keywords % "vb_misc"
+   :labelprefix: O
+
 .. toctree::
    :maxdepth: 1
    :hidden:
