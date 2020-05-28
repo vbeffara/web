@@ -12,27 +12,6 @@ my current experiments if you have `git <http://git.or.cz/>`__. Just say
 
    git clone git://github.com/vbeffara/Simulations.git
 
-.. code:: C++
-
-   std::vector<int> f (const double &x);
-
-.. code:: python
-
-   #!/usr/bin/python3
-
-   from engine import RunForrestRun
-
-   """Test code for syntax highlighting!"""
-
-   class Foo:
-      def __init__(self, var):
-         self.var = var
-         self.run()
-
-      def run(self):
-         RunForrestRun()  # run along!
-
-
 Try them out, modify them, everything is under the GPL license. I develop
 essentially on Mac OS X, but once in a while I check that everything compiles on
 Linux. I tend to like experimenting with new features (typically the functional

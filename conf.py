@@ -1,8 +1,14 @@
 # -- Path setup --------------------------------------------------------------
+import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 from pybtex.style.formatting.plain import Style as UpStyle
 from pybtex.style.template import sentence, tag, names
 from pybtex.plugin import register_plugin
+from docutils import nodes, utils
+from sphinx.util.nodes import split_explicit_title
+import arxiv
 
 # -- Project information -----------------------------------------------------
 
@@ -49,3 +55,25 @@ class MyStyle(UpStyle):
 
 
 register_plugin('pybtex.style.formatting', 'mystyle', MyStyle)
+
+
+def arxiv_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
+    text = utils.unescape(text)
+    has_explicit_title, title, part = split_explicit_title(text)
+    print("Fetching arXiv " + part)
+    data = arxiv.query(id_list=[part])[0]
+
+    node = nodes.Text(", ".join(data.authors) + ", " + data.title + ", ")
+    link1 = nodes.reference(
+        title, title, internal=False, refuri=data.arxiv_url)
+    link2 = nodes.reference(
+        "[PDF]", "[PDF]", internal=False, refuri=data.pdf_url)
+    return [node, link1, nodes.Text(" "), link2], []
+
+
+def setup_link_role(app):
+    app.add_role('arxiv', arxiv_role)
+
+
+def setup(app):
+    app.connect('builder-inited', setup_link_role)

@@ -46,7 +46,7 @@ hr { border: 0px; color: $blue; background-color: $blue; height: 1px; margin: 2e
 
 
 table { margin: 2ex auto 1ex; border-collapse: collapse; font-size: 90%;
-    td { padding: .5ex .5em; border: 1px solid $blue; } }
+    td { padding: .1ex .5em; border: 1px solid $blue; p { margin : 0; }} }
 
 // @media screen and (max-width: 60em) { #content { margin: 0 4em; } }
 @media screen and (max-width: 68em) { #content { margin: 0;
