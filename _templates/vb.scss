@@ -1,0 +1,78 @@
+$blue: #004add;
+$green: #94ee00;
+
+html { color: rgba(0, 0, 0, .8); background-color: white; text-align: justify; font-family: Palatino, serif; font-size: 115%;
+  hyphens: auto; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; }
+
+html, body { margin: 0; padding: 0; }
+
+h1 { font-size: 220%; margin: 1.5ex auto 2ex; text-align: center; }
+h2 { font-size: 150%; margin: 2ex -1em 1ex -1em; border-bottom: 2px solid $blue; }
+h3 { font-size: 125%; margin: 2.5ex -1em 1ex -1em; }
+
+#preamble { position: absolute; top: 0; width: 11em; padding: 0 .5em .5em; background-color: $blue; font-size: 90%;
+    border-color : $green; border-style: solid; border-width : 0 3px 3px 0;
+    border-radius: 0 0 .5em 0; box-shadow: 0em 0em 1em rgba($blue, 1); font-family: Verdana, sans-serif; color: $green;
+    img { display: block; border: none; max-width: 100%; margin: 2ex auto; }
+    h2 { margin: .5ex -.3em .2ex; font-size: small; font-weight: normal; text-transform: lowercase; border-bottom: 1px solid $green;
+        text-align: right; color: $green; }
+    ul { margin: 0; padding: .2em; list-style-image: url("/_static/bullet.png"); font-size: 75%;
+        li { margin: .2ex 0 .2ex 1em; }
+        a { color: $green; }
+        li.current { margin-right: -.87em; background: rgba($green,1); a { padding: 0 .2em; color: $blue; } }
+    }
+}
+
+#content { margin: 0 auto; padding: 2ex 2em 2ex 12em; max-width: 43em; }
+
+article {
+  p { margin: 1ex 0; line-height: 130%; }
+  dl.citation { font-size: 90%; 
+    dt, dd { display: inline; margin: 0em; } 
+    p { line-height: 110%; display: inline; }
+    dd:after { content: ''; display: block; margin: 1ex 0; }
+    span.brackets::before { content: "["; } 
+    span.brackets::after { content: "]"; } }
+  pre { margin: 2ex 0em; padding: 1ex .5em; }
+}
+
+a { text-decoration: none; color: $blue; &:visited, &:active { color: $blue; } &:hover { text-decoration: underline; } }
+
+img { border: none; margin: 1ex 1em; vertical-align: middle; }
+img.logo { float: right; border-left : 1.5em solid white; margin: 2ex -1.5em 0 0; clear: both; }
+img.logotop { float: right; border-left : 1.5em solid white; margin: .5ex -1.5em 1ex 0; max-width: 288.5px; }
+
+hr { border: 0px; color: $blue; background-color: $blue; height: 1px; margin: 2ex -1em; }
+
+
+table { margin: 2ex auto 1ex; border-collapse: collapse; font-size: 90%;
+    td { padding: .5ex .5em; border: 1px solid $blue; } }
+
+// @media screen and (max-width: 60em) { #content { margin: 0 4em; } }
+@media screen and (max-width: 68em) { #content { margin: 0;
+                                                    h2 { margin: 2ex 0 1ex; }
+                                                    h3 { margin: 2.5ex 0 1ex; }
+                                                    article img.logotop { margin-right: 0; } }
+                                      hr { margin: 1ex 0; }
+                                      body.entry, body.draft { article { margin: 2ex 0; padding: 1ex 1em; } } }
+@media screen and (max-width: 54em) { #preamble { position: relative; width: 100%; border-radius: 0; overflow: auto; padding: 0;
+                                                  border-width: 3px 0 0;
+                                                  p { display: none; }
+                                                  h2 { margin: 0 0.5em; }
+                                                  div.outline-3 { float: left; width: 29%; margin: 0 2%; }
+                                                  ul li.current { margin-right: 0; }
+                                                }
+                                      #content { margin-left: 0; padding: 1ex 2em; } }
+@media screen and (max-width: 30em) { #content { margin: 0; padding: 1ex 1em; }
+                                      h1 { font-size: 200%; margin: 0 auto 1ex; }
+                                      h2 { font-size: 140%; }
+                                      body.entry, body.draft { background: white; article { box-shadow: none; padding: 0; .date { margin: -1ex auto 0ex; } } }
+                                      blockquote { margin: 2ex 0; } }
+
+@media print { #preamble { display: none; }
+               #content { margin: 0; padding: 0; max-width: 100%;
+                             h2 { margin: 2ex 0 1ex; }
+                             h3 { margin: 2.5ex 0 1ex; } } }
+
+.headerlink { display: none; }
+.katex { font-size: 100% !important; }

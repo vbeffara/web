@@ -1,6 +1,6 @@
 .. title:: Home
 
-.. image:: _static/images/VB.jpg
+.. image:: images/VB.jpg
    :class: logotop
 
 Vincent Beffara
