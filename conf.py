@@ -1,14 +1,11 @@
 # -- Path setup --------------------------------------------------------------
-import os
-import sys
-sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-
 from pybtex.style.formatting.plain import Style as UpStyle
 from pybtex.style.template import sentence, tag, names
 from pybtex.plugin import register_plugin
 from docutils import nodes, utils
 from sphinx.util.nodes import split_explicit_title
 import arxiv
+import pickle
 
 # -- Project information -----------------------------------------------------
 
@@ -57,11 +54,22 @@ class MyStyle(UpStyle):
 register_plugin('pybtex.style.formatting', 'mystyle', MyStyle)
 
 
+def get_arxiv(id):
+    try:
+        cache = pickle.load(open("/tmp/arxiv.pickle", "rb"))
+    except (IOError, ValueError, TypeError):
+        cache = {}
+
+    if id not in cache:
+        cache[id] = arxiv.query(id_list=[id])[0]
+        pickle.dump(cache, open("/tmp/arxiv.pickle", "wb"))
+    return cache[id]
+
+
 def arxiv_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
     text = utils.unescape(text)
     has_explicit_title, title, part = split_explicit_title(text)
-    print("Fetching arXiv " + part)
-    data = arxiv.query(id_list=[part])[0]
+    data = get_arxiv(part)
 
     node = nodes.Text(", ".join(data.authors) + ", " + data.title + ", ")
     link1 = nodes.reference(
