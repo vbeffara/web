@@ -15,7 +15,7 @@ author = 'Vincent Beffara'
 
 extensions = ['sphinxcontrib.bibtex', 'sphinxcontrib.katex', 'sphinx_sass']
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.git']
 
 
 # -- Options for HTML output -------------------------------------------------
