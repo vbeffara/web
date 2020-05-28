@@ -36,10 +36,6 @@ katex_options = r'''{
 sass_configs = [{'entry': "_templates/vb.scss", 'output': "basic.css"}]
 
 
-def sass(x, y, z):
-    os.system("sass --no-source-map _static/basic.scss _static/basic.css")
-
-
 class MyStyle(UpStyle):
     def __init__(self):
         super().__init__(abbreviate_names=True)
