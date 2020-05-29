@@ -2,7 +2,7 @@ Groupe de travail
 =================
 
 .. list-table::
-    :widths: 10 25 65
+    :widths: 10 22 68
     :header-rows: 1
 
     * - Date

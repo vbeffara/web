@@ -71,12 +71,11 @@ def arxiv_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
     has_explicit_title, title, part = split_explicit_title(text)
     data = get_arxiv(part)
 
-    node = nodes.Text(", ".join(data.authors) + ", " + data.title + ", ")
-    link1 = nodes.reference(
-        title, title, internal=False, refuri=data.arxiv_url)
-    link2 = nodes.reference(
-        "[PDF]", "[PDF]", internal=False, refuri=data.pdf_url)
-    return [node, link1, nodes.Text(" "), link2], []
+    a = nodes.strong("", ", ".join(data.authors) + ", ")
+    t = nodes.emphasis("", data.title + ", ")
+    l1 = nodes.reference(title, title, internal=False, refuri=data.arxiv_url)
+    l2 = nodes.reference("[PDF]", "[PDF]", internal=False, refuri=data.pdf_url)
+    return [a, t, l1, nodes.Text(" "), l2], []
 
 
 def setup_link_role(app):

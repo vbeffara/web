@@ -35,6 +35,7 @@ Publications
 .. bibliography:: ../zotero.bib
    :style: mystyle
    :filter: keywords % "vb_pub"
+   :labelprefix: B
 
 Preprints
 ---------

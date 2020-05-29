@@ -45,6 +45,7 @@ img.logotop { float: right; border-left : 1.5em solid white; margin: .5ex -1.5em
 hr { border: 0px; color: $blue; background-color: $blue; height: 1px; margin: 2ex -1em; }
 
 table { margin: 2ex auto 1ex; border-collapse: collapse; font-size: 90%;
+    th { font-size: 110%; padding: .1ex .5em; }
     tr.row-even { background : rgba(0,0,0,.05); }
     td { padding: .1ex .5em; border: 1px solid $blue; p { margin : 0; }} }
 
