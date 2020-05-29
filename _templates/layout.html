@@ -33,10 +33,7 @@
 <body>
   <div id="content">
     <article>
-      {# logo #}
-      <div class="post-content">
-        {% block body %}{% endblock %}
-      </div>
+      {% block body %}{% endblock %}
     </article>
   </div>
 
@@ -58,7 +55,6 @@
     </ul>
 
     <h2>Navigation</h2>
-
     {{ toctree(maxdepth=1, collapse=False, includehidden=true) }}
 
     <h2>Links</h2>
