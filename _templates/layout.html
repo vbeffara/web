@@ -1,53 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "!layout.html" %}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+{% block footer %}{% endblock %}
 
-<head>
-  <title>{{ title|striptags|e }} - Vincent Beffara</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="shortcut icon" href="{{ pathto('_static/favicon.png', 1) }}" />
-  <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
-  <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-  {%- for css in css_files %}
-  {%- if css|attr("rel") %}
-  <link rel="{{ css.rel }}" href="{{ pathto(css.filename, 1) }}" type="text/css"
-    {% if css.title is not none %}title="{{ css.title }}" {% endif %} />
-  {%- else %}
-  <link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
-  {%- endif %}
-  {%- endfor %}
+{% block sidebar2 %}
+<div id="preamble">
+  <a href="http://www-fourier.ujf-grenoble.fr"> <img src="{{ pathto('_static/IF.png', 1) }}" alt="If"> </a>
 
-  {%- for scriptfile in script_files %}
-  {{ js_tag(scriptfile) }}
-  {%- endfor %}
-</head>
+  <h2>Contact</h2>
+  <ul>
+    <li>Université Grenoble Alpes<br />Institut Fourier<br />100 rue des Maths<br />38058 Grenoble cedex 9</li>
+    <li>Tel: 04 76 51 44 58<br /> Fax: 04 76 51 44 78</li>
+    <li><a href="mailto:Vincent.Beffara@univ-grenoble-alpes.fr">Vincent.Beffara@univ-grenoble-alpes.fr</a></li>
+  </ul>
 
-<body>
-  <div id="content">
-    <article>
-      {% block body %}{% endblock %}
-    </article>
-  </div>
+  <h2>Navigation</h2>
+  {{ toctree(maxdepth=1, collapse=False, includehidden=true) }}
 
-  <div id="preamble">
-    <a href="http://www-fourier.ujf-grenoble.fr"> <img src="{{ pathto('_static/IF.png', 1) }}" alt="If"> </a>
-
-    <h2>Contact</h2>
-    <ul>
-      <li>Université Grenoble Alpes<br />Institut Fourier<br />100 rue des Maths<br />38058 Grenoble cedex 9</li>
-      <li>Tel: 04 76 51 44 58<br /> Fax: 04 76 51 44 78</li>
-      <li><a href="mailto:Vincent.Beffara@univ-grenoble-alpes.fr">Vincent.Beffara@univ-grenoble-alpes.fr</a></li>
-    </ul>
-
-    <h2>Navigation</h2>
-    {{ toctree(maxdepth=1, collapse=False, includehidden=true) }}
-
-    <h2>Links</h2>
-    <ul>
-      <li><a href="http://images.math.cnrs.fr/">Images des Maths</a></li>
-      <li><a href="http://jps.math.cnrs.fr/">Colloque JPS</a></li>
-    </ul>
-  </div>
-</body>
-
-</html>
+  <h2>Links</h2>
+  <ul>
+    <li><a href="http://images.math.cnrs.fr/">Images des Maths</a></li>
+    <li><a href="http://jps.math.cnrs.fr/">Colloque JPS</a></li>
+  </ul>
+</div>
+{% endblock %}

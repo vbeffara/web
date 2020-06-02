@@ -26,6 +26,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.git']
 html_show_sourcelink = False
 html_static_path = ['_static']
 html_theme = 'basic'
+html_title = project
 pygments_style = 'monokai'
 
 katex_options = r'''{

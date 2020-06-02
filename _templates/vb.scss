@@ -22,9 +22,7 @@ h3 { font-size: 125%; margin: 2.5ex -1em 1ex -1em; }
     }
 }
 
-#content { margin: 0 auto; padding: 2ex 2em 2ex 13em; max-width: 43em; }
-
-article {
+div.body { margin: 0 auto; padding: 2ex 2em 2ex 13em; max-width: 43em; 
   p { margin: 1ex 0; line-height: 130%; }
   dl.citation { font-size: 90%; 
     dt, dd { display: inline; margin: 0em; } 
@@ -39,7 +37,7 @@ a { text-decoration: none; color: $blue; &:visited, &:active { color: $blue; } &
 
 img { border: none; margin: 1ex 1em; vertical-align: middle; }
 img.logo { float: right; border-left : 1.5em solid white; margin: 2ex -1.5em 0 0; clear: both; }
-img.logotop { float: right; border-left : 1.5em solid white; margin: .5ex -1.5em 1ex 0; max-width: 288.5px; }
+img.logotop { float: right; border-left : 1.5em solid white; margin: 4ex -1.5em 1ex 0; max-width: 288.5px; }
 
 hr { border: 0px; color: $blue; background-color: $blue; height: 1px; margin: 2ex -1em; }
 
@@ -48,8 +46,7 @@ table { margin: 2ex auto 1ex; border-collapse: collapse; font-size: 90%;
     tr.row-even { background : rgba(0,0,0,.05); }
     td { padding: .1ex .5em; border: 1px solid $blue; p { margin : 0; }} }
 
-// @media screen and (max-width: 60em) { #content { margin: 0 4em; } }
-@media screen and (max-width: 68em) { #content { margin: 0;
+@media screen and (max-width: 68em) { div.body { margin: 0;
                                                     h2 { margin: 2ex 0 1ex; }
                                                     h3 { margin: 2.5ex 0 1ex; }
                                                     article img.logotop { margin-right: 0; } }
@@ -62,15 +59,15 @@ table { margin: 2ex auto 1ex; border-collapse: collapse; font-size: 90%;
                                                   div.outline-3 { float: left; width: 29%; margin: 0 2%; }
                                                   ul li.current { margin-right: 0; }
                                                 }
-                                      #content { margin-left: 0; padding: 1ex 2em; } }
-@media screen and (max-width: 30em) { #content { margin: 0; padding: 1ex 1em; }
+                                      div.body { margin-left: 0; padding: 1ex 2em; } }
+@media screen and (max-width: 30em) { div.body { margin: 0; padding: 1ex 1em; }
                                       h1 { font-size: 200%; margin: 0 auto 1ex; }
                                       h2 { font-size: 140%; }
                                       body.entry, body.draft { background: white; article { box-shadow: none; padding: 0; .date { margin: -1ex auto 0ex; } } }
                                       blockquote { margin: 2ex 0; } }
 
 @media print { #preamble { display: none; }
-               #content { margin: 0; padding: 0; max-width: 100%;
+               div.body { margin: 0; padding: 0; max-width: 100%;
                              h2 { margin: 2ex 0 1ex; }
                              h3 { margin: 2.5ex 0 1ex; } } }
 
