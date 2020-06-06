@@ -23,6 +23,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.git']
 
 # -- Options for HTML output -------------------------------------------------
 
+html_favicon = '_static/favicon.png'
 html_show_sourcelink = False
 html_static_path = ['_static']
 html_theme = 'basic'

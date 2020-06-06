@@ -58,5 +58,6 @@ Other documents
    :hidden:
 
    self
+   pictures
    simulations
    travdoc

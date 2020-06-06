@@ -16,9 +16,9 @@ h3 { font-size: 125%; margin: 2.5ex -1em 1ex -1em; }
     h2 { margin: .5ex -.625em .2ex; padding-right: .5em; font-size: 80%; font-weight: normal; text-transform: lowercase; border-bottom: 1px solid $green;
         text-align: right; color: $green; }
     ul { margin: 0; padding: 1ex .2em; list-style-image: url("/_static/bullet.png"); font-size: 75%;
-        li { margin: .2ex 0 .2ex 1em; padding: 0 .2em; }
+        li { margin: .2ex 0 .2ex 1em; padding: .2ex .5em; }
         a { color: $green; }
-        li.current { margin-right: -.87em; background: white; a { color: $blue; } }
+        li.current { margin-right: -.87em; background: white; a { color: $blue; } border-radius: 2ex 0 0 2ex; }
     }
 }
 
