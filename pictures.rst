@@ -1,14 +1,14 @@
 Pictures
 ========
 
-Here are some pictures I produced of various random two-dimensional
-objects. In each case there is a small preview, and the full-resolution
-image itself is linked in case you would like to download it (some of
-the files can be quite large!). There is a discussion about some of the
-simulations themselves on `this page <simulations>`__, and if I get the
-motivation someday I might set up separate pages for each model.
+Here are some pictures I produced of various random two-dimensional objects. In
+each case there is a small preview, and the full-resolution image itself is
+linked in case you would like to download it (some of the files can be quite
+large!). There is a discussion about some of the simulations themselves on
+:doc:`this page <simulations>` and if I get the motivation someday I might set
+up separate pages for each model.
 
-**“Terms of use:”** You can use any one of the images on this page in
+**"Terms of use:"** You can use any one of the images on this page in
 any way you see fit; just let me know when you do so.
 
 One last thing: If you need pictures with a higher definition (or

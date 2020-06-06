@@ -58,13 +58,13 @@ register_plugin('pybtex.style.formatting', 'mystyle', MyStyle)
 
 def get_arxiv(id):
     try:
-        cache = pickle.load(open("/tmp/arxiv.pickle", "rb"))
+        cache = pickle.load(open("arxiv.pickle", "rb"))
     except (IOError, ValueError, TypeError):
         cache = {}
 
     if id not in cache:
         cache[id] = arxiv.query(id_list=[id])[0]
-        pickle.dump(cache, open("/tmp/arxiv.pickle", "wb"))
+        pickle.dump(cache, open("arxiv.pickle", "wb"))
     return cache[id]
 
 

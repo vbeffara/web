@@ -3,7 +3,7 @@ Simulations
 
 I am trying to present on this page various simulations I did over the past
 years, and especially to give a few details about the SLE pictures I produced.
-Some of the images produced are on `this page <pictures.html>`__. Help yourself,
+Some of the images produced are on :doc:`this page <pictures>`. Help yourself,
 use them as you see fit, just let me know. If you are interested in the code,
 you can download the full source for the last versions with complete history and
 my current experiments if you have `git <http://git.or.cz/>`__. Just say
