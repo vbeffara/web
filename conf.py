@@ -56,23 +56,19 @@ class MyStyle(UpStyle):
 register_plugin('pybtex.style.formatting', 'mystyle', MyStyle)
 
 
-def get_arxiv(id):
+def arxiv_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
+    text = utils.unescape(text)
+    _, title, part = split_explicit_title(text)
+
     try:
         cache = pickle.load(open("arxiv.pickle", "rb"))
     except (IOError, ValueError, TypeError):
         cache = {}
-
-    if id not in cache:
-        cache[id] = arxiv.query(id_list=[id])[0]
+    if part not in cache:
+        cache[part] = arxiv.query(id_list=[part])[0]
         pickle.dump(cache, open("arxiv.pickle", "wb"))
-    return cache[id]
 
-
-def arxiv_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
-    text = utils.unescape(text)
-    has_explicit_title, title, part = split_explicit_title(text)
-    data = get_arxiv(part)
-
+    data = cache[part]
     a = nodes.strong("", ", ".join(data.authors) + ", ")
     t = nodes.emphasis("", data.title + ", ")
     l1 = nodes.reference(title, title, internal=False, refuri=data.arxiv_url)
@@ -80,9 +76,6 @@ def arxiv_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
     return [a, t, l1, nodes.Text(" "), l2], []
 
 
-def setup_link_role(app):
-    app.add_role('arxiv', arxiv_role)
-
-
 def setup(app):
-    app.connect('builder-inited', setup_link_role)
+    app.connect('builder-inited',
+                lambda app: app.add_role('arxiv', arxiv_role))
