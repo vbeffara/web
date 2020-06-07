@@ -2,7 +2,7 @@ $blue: #004add;
 $green: #94ee00;
 
 html { color: rgba(0, 0, 0, .8); background-color: white; text-align: justify; font-family: Palatino, serif; font-size: 115%;
-  hyphens: auto; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; }
+  hyphens: auto; }
 
 html, body { margin: 0; padding: 0; }
 
@@ -10,11 +10,11 @@ h1 { font-size: 220%; margin: 1.5ex auto 2ex; text-align: center; }
 h2 { font-size: 150%; margin: 2ex -1em 1ex -1em; border-bottom: 2px solid $blue; }
 h3 { font-size: 125%; margin: 2.5ex -1em 1ex -1em; }
 
-#preamble { position: fixed; top: 0; width: 12em; height: 100%; padding: 0 .5em .5em; background-color: $blue; font-size: 90%;
+#preamble { position: fixed; top: 0; width: 12em; height: 100%; padding: 0 .5em; background-color: $blue; font-size: 90%;
     font-family: Verdana, sans-serif; color: $green;
     img { display: block; border: none; max-width: 100%; margin: 2ex auto; }
-    h2 { margin: .5ex -.625em .2ex; padding-right: .5em; font-size: 80%; font-weight: normal; text-transform: lowercase; border-bottom: 1px solid $green;
-        text-align: right; color: $green; }
+    h2 { margin: .5ex -.625em .2ex; padding-right: .5em; font-size: 80%; font-weight: normal; text-transform: lowercase; 
+        border-bottom: 1px solid $green; text-align: right; color: $green; }
     ul { margin: 0; padding: 1ex .2em; list-style-image: url("/_static/bullet.png"); font-size: 75%;
         li { margin: .2ex 0 .2ex 1em; padding: .2ex .5em; }
         a { color: $green; }
@@ -37,7 +37,7 @@ a { text-decoration: none; color: $blue; &:visited, &:active { color: $blue; } &
 
 img { border: none; margin: 1ex 1em; vertical-align: middle; }
 img.logo { float: right; border-left : 1.5em solid white; margin: 2ex -1.5em 0 0; clear: both; }
-img.logotop { float: right; border-left : 1.5em solid white; margin: 4ex -1.5em 1ex 0; max-width: 288.5px; }
+img.logotop { float: right; background: white; padding-left : 1.5em; margin: 4ex -1.5em 1ex 0; max-width: 300px; }
 
 hr { border: 0px; color: $blue; background-color: $blue; height: 1px; margin: 2ex -1em; }
 
