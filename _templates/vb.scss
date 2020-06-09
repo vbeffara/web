@@ -31,6 +31,7 @@ div.body { margin: 0 auto; padding: 2ex 2em 2ex 13em; max-width: 43em;
     span.brackets::before { content: "["; } 
     span.brackets::after { content: "]"; } }
   pre { margin: 2ex 0em; padding: 1ex .5em; }
+  a.download code { font-family: inherit; }
 }
 
 a { text-decoration: none; color: $blue; &:visited, &:active { color: $blue; } &:hover { text-decoration: underline; } }
