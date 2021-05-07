@@ -1,9 +1,11 @@
 # -- Path setup --------------------------------------------------------------
 from pybtex.style.formatting.plain import Style as UpStyle
 from pybtex.style.template import sentence, tag, names
-from pybtex.plugin import register_plugin
+from pybtex.plugin import register_plugin, find_plugin
 from docutils import nodes, utils
 from sphinx.util.nodes import split_explicit_title
+from pybtex.database.input import bibtex
+import requests
 import arxiv
 import pickle
 
@@ -65,6 +67,7 @@ def arxiv_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
     except (IOError, ValueError, TypeError):
         cache = {}
     if part not in cache:
+        print("Fetching arXiv " + part)
         cache[part] = arxiv.query(id_list=[part])[0]
         pickle.dump(cache, open("arxiv.pickle", "wb"))
 
@@ -76,6 +79,29 @@ def arxiv_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
     return [a, t, l1, nodes.Text(" "), l2], []
 
 
+def doi_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
+    text = utils.unescape(text)
+    _, title, part = split_explicit_title(text)
+
+    try:
+        cache = pickle.load(open("doi.pickle", "rb"))
+    except (IOError, ValueError, TypeError):
+        cache = {}
+    if part not in cache:
+        print("Fetching DOI " + part)
+        url = "http://dx.doi.org/" + part
+        headers = {"accept": "application/x-bibtex"}
+        r = requests.get(url, headers=headers)
+        b = bibtex.Parser().parse_string(r.text)
+        cache[part] = list(b.entries.values())[0]
+        pickle.dump(cache, open("doi.pickle", "wb"))
+
+    e = cache[part]
+    style = find_plugin('pybtex.style.formatting', 'mystyle')()
+    backend = find_plugin('pybtex.backends', 'docutils')()
+    return backend.paragraph(style.format_entry(entry=e, label="")), []
+
+
 def setup(app):
     app.connect('builder-inited',
-                lambda app: app.add_role('arxiv', arxiv_role))
+                lambda app: (app.add_role('arxiv', arxiv_role), app.add_role('doi', doi_role)))

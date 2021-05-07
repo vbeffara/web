@@ -8,6 +8,18 @@ Groupe de travail
     * - Date
       - Orateur
       - Article
+    * - 2021/05/04
+      - Corentin FAIPEUR
+      - :arxiv:`0904.3740` 
+    * - 2020/11/10
+      - Nicolas FRILET
+      - :arxiv:`2009.04306`
+    * - 2020/10/22
+      - Vivek DEWAN
+      - :arxiv:`2010.03609`
+    * - 2020/10/15
+      - Sonia VELASCO
+      - :arxiv:`0704.2242`
     * - 2020/03/13 
       - Fardad POURAN    
       - :arxiv:`1908.07203`
